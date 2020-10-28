@@ -1,17 +1,17 @@
 {
-  "name": "@lottiefiles/lottie-player",
-  "version": "0.5.1",
+  "name": "@hmh-cam/lottie-player",
+  "version": "0.5.5",
   "description": "Lottie animation and Telegram Sticker player web components.",
-  "main": "dist/lottie-player.js",
-  "module": "dist/lottie-player.js",
-  "types": "dist/lottie-player.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://lottiefiles.com/web-player",
   "repository": "https://github.com/LottieFiles/lottie-player.git",
   "bugs": "https://github.com/LottieFiles/lottie-player/issues",
-  "author": "Jawish Hameed <jawish@lottiefiles.com>",
+  "author": "Raphael dos Santos <raphael.dossantos@hmhco.com>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build-lottie && yarn build-tgs",
+    "build": "tsc -p ./",
     "build-lottie": "parcel build src/lottie-player.ts --detailed-report 50 --out-file lottie-player.js",
     "build-tgs": "parcel build src/tgs-player.ts --detailed-report 50 --out-file tgs-player.js",
     "start": "parcel src/index.html"
@@ -25,7 +25,12 @@
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "typescript": "^3.4.5"
+    "typescript": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-html": "latest",
+    "eslint-plugin-json": "latest",
+    "eslint-plugin-prettier": "latest"
   },
   "files": [
     "dist/"
@@ -46,5 +51,21 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": "warn",
+      "@typescript-eslint/no-explicit-any": "off"
+    }
   }
 }
