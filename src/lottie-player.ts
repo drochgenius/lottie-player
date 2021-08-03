@@ -1,6 +1,7 @@
 import 'lottie-web';
 
-import { LitElement, html, property, query, TemplateResult, CSSResult, CSSResultArray } from 'lit-element';
+import { LitElement, html, TemplateResult, CSSResultGroup } from 'lit';
+import { property, query } from 'lit/decorators';
 import { customElement } from './utils/decorators';
 import { AnimationDirection, AnimationItem, default as Lottie } from 'lottie-web';
 
@@ -520,7 +521,7 @@ export class LottiePlayer extends LitElement {
   /**
    * Returns the styles for the component.
    */
-  public static get styles(): CSSResult | CSSResultArray {
+  public static get styles(): CSSResultGroup {
     return styles;
   }
 

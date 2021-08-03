@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from 'lit';
 import styles from './lottie-player.styles';
 
 export default css`

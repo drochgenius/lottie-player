@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@types/pako": "^1.0.1",
-    "lit-element": "^2.3.1",
+    "lit": "latest",
     "lottie-web": "^5.6.6",
     "pako": "^1.0.11",
     "resize-observer-polyfill": "^1.5.1"
@@ -41,7 +41,7 @@
     "lottiefiles",
     "web component",
     "component",
-    "lit-element",
+    "lit",
     "player",
     "telegram sticker",
     "tgs"
@@ -60,7 +60,7 @@
       "plugin:prettier/recommended"
     ],
     "parserOptions": {
-      "ecmaVersion": 2020,
+      "ecmaVersion": 2018,
       "sourceType": "module"
     },
     "rules": {
